@@ -1,4 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommanads;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -21,10 +21,10 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
 
         public async Task Handle(UpdateFeatureCommand request, CancellationToken cancellationToken)
         {
-            var values = await _repository.GetByIdAsync(request.FeatureId);
-            values.Name =request.Name;
+
+            var values = await _repository.GetByIdAsync(request.FeatureID);
+            values.Name = request.Name;
             await _repository.UpdateAsync(values);
         }
     }
-    }
-
+}

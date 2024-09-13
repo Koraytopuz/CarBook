@@ -1,4 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommanads;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -12,7 +12,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
 {
     public class RemoveFeatureCommandHandler : IRequestHandler<RemoveFeatureCommand>
     {
-        private readonly IRepository<Feature>_repository;
+        private readonly IRepository<Feature> _repository;
 
         public RemoveFeatureCommandHandler(IRepository<Feature> repository)
         {
@@ -21,7 +21,6 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
 
         public async Task Handle(RemoveFeatureCommand request, CancellationToken cancellationToken)
         {
-
             var value = await _repository.GetByIdAsync(request.Id);
             await _repository.RemoveAsync(value);
         }

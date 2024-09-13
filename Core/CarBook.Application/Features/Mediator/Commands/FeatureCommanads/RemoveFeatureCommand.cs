@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.Mediator.Commands.FeatureCommands
+namespace CarBook.Application.Features.Mediator.Commands.FeatureCommanads
 {
-    public class RemoveFeatureCommand : IRequest
+    public class RemoveFeatureCommand:IRequest
     {
         public int Id { get; set; }
 

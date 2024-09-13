@@ -91,7 +91,7 @@ namespace CarBook.Persistence.Migrations
                 {
                     FeatureId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -256,7 +256,7 @@ namespace CarBook.Persistence.Migrations
                         name: "FK_CarFeatures_Features_FeatureID",
                         column: x => x.FeatureID,
                         principalTable: "Features",
-                        principalColumn: "FeatureId",
+                        principalColumn: "FeatureID",
                         onDelete: ReferentialAction.Cascade);
                 });
 

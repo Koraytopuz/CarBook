@@ -1,5 +1,5 @@
-﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommands;
-using CarBook.Application.Features.Mediator.Queries.FeatureQueries;
+﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommanads;
+using CarBook.Application.Features.Mediator.Queries.FeaturesQueries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,8 +25,8 @@ namespace CarBook.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetFeature(int id)
         {
-            var value= await _mediator.Send(new GetFeatureByIdQuery(id));
-            return Ok(value);  
+            var values=await _mediator.Send(new GetFeatureByIdQuery(id));
+            return Ok(values);  
         }
         [HttpPost]
         public async Task<IActionResult> CreateFeature(CreateFeatureCommand command)
@@ -41,9 +41,8 @@ namespace CarBook.WebApi.Controllers
             return Ok("Özellik Başarıyla Silindi");
         }
         [HttpPut]
-        public async Task<IActionResult>UpdateFeature(UpdateFeatureCommand command)
-        {
-            await _mediator.Send(command);
+        public async Task<IActionResult> UpdateFeature(UpdateFeatureCommand command)
+        {  await _mediator.Send(command);
             return Ok("Özellik Başarıyla Güncellendi");
         }
     }

@@ -1,6 +1,6 @@
 ﻿using CarBook.Application.Features.CQRS.Results.BrandResults;
-using CarBook.Application.Features.Mediator.Queries.FeatureQueries;
-using CarBook.Application.Features.Mediator.Results.FeatureResult;
+using CarBook.Application.Features.Mediator.Queries.FeaturesQueries;
+using CarBook.Application.Features.Mediator.Results.FeatureResults;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -15,7 +15,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
 {
     public class GetFeatureByIdQueryHandler : IRequestHandler<GetFeatureByIdQuery, GetFeatureByIdQueryResult>
     {
-    private readonly IRepository<Feature> _repository;
+        private readonly IRepository<Feature> _repository;
 
         public GetFeatureByIdQueryHandler(IRepository<Feature> repository)
         {
@@ -27,8 +27,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
             var values = await _repository.GetByIdAsync(request.Id);
             return new GetFeatureByIdQueryResult
             {
-                FeatureId=values.FeatureId,
-                Name = values.Name
+                FeatureID= values.FeatureID,
+                Name= values.Name
             };
         }
     }

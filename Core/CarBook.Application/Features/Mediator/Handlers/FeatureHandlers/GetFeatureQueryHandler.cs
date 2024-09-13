@@ -1,12 +1,13 @@
 ﻿using CarBook.Application.Features.CQRS.Results.BrandResults;
-using CarBook.Application.Features.Mediator.Queries.FeatureQueries;
-using CarBook.Application.Features.Mediator.Results.FeatureResult;
+using CarBook.Application.Features.Mediator.Queries.FeaturesQueries;
+using CarBook.Application.Features.Mediator.Results.FeatureResults;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,8 +27,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
             var values = await _repository.GetAllAsync();
             return values.Select(x => new GetFeatureQueryResult
             {
-                FeatureId = x.FeatureId,
-                Name= x.Name, 
+                FeatureID=x.FeatureID,
+                Name = x.Name,
             }).ToList();
         }
     }

@@ -1,4 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.FeatureCommanads;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -23,7 +23,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.FeatureHandlers
         {
             await _repository.CreateAsync(new Feature
             {
-                Name = request.Name,
+               Name = request.Name
+
             });
         }
     }
