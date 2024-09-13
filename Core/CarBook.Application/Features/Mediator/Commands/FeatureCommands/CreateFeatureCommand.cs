@@ -9,6 +9,6 @@ namespace CarBook.Application.Features.Mediator.Commands.FeatureCommands
 {
     public class CreateFeatureCommand :IRequest
     {
-        public int Name { get; set; }
+        public string Name { get; set; }
     }
 }

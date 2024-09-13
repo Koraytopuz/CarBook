@@ -9,6 +9,6 @@ namespace CarBook.Application.Features.Mediator.Results.FeatureResult
     public class GetFeatureByIdQueryResult
     {
         public int FeatureId { get; set; }
-        public int Name { get; set; }
+        public string Name { get; set; }
     }
 }
