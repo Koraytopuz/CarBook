@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Domain.Entites
+namespace CarBook.Application.Features.Mediator.Commands.SocialMediaCommands
 {
-    public class SocialMedia
+    public class UpdateSocialMediaCommand:IRequest
     {
         public int SocialMediaID { get; set; }
         public string Name { get; set; }
