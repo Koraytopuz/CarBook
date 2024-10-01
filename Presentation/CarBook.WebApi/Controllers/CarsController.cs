@@ -3,6 +3,7 @@ using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook.Application.Features.CQRS.Queries.CarQueries;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CarBook.WebApi.Controllers
 {
@@ -16,7 +17,6 @@ namespace CarBook.WebApi.Controllers
         private readonly UpdateCarCommandHandler _updateCarCommandHandler;
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
-
         public CarsController(CreateCarCommandHandler createCommandHandler, GetCarByIdQueryHandler getCarByIdQueryHandler, GetCarQueryHandler getCarQueryHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler)
         {
             _createCommandHandler = createCommandHandler;
@@ -57,11 +57,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("Araba Bilgisi Güncellendi");
         }
         [HttpGet("GetCarWithBrand")]
-        public IActionResult GetCarWithBrand()
+        public async Task<IActionResult> GetCarWithBrand()
         {
-            var values= _getCarWithBrandQueryHandler.Handle();
+            var values = _getCarWithBrandQueryHandler.Handle();
             return Ok(values);
         }
     }
 }
-

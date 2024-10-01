@@ -4,11 +4,11 @@ using Newtonsoft.Json;
 
 namespace CarBook.WebUI.Controllers
 {
-    public class ServiceController1 : Controller
+    public class ServiceController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public ServiceController1(IHttpClientFactory httpClientFactory)
+        public ServiceController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }

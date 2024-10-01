@@ -19,9 +19,9 @@ namespace CarBook.Application.Features.CQRS.Handlers.CarHandlers
             _repository = repository;
         }
 
-        public  List<GetCarWithBrandQueryResult> Handle()
+        public List<GetCarWithBrandQueryResult> Handle()
         {
-            var values =  _repository.GetCarsListWithBrand();
+            var values = _repository.GetCarsListWithBrand();
             return values.Select(x => new GetCarWithBrandQueryResult
             {
                 BrandName=x.Brand.Name,
