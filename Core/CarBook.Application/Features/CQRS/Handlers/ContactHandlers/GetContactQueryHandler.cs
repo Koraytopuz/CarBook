@@ -1,12 +1,6 @@
 ﻿using CarBook.Application.Features.CQRS.Results.ContactResult;
-using CarBook.Application.Features.CQRS.Results.ContactResult;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.CQRS.Handlers.ContactHandlers
 {
