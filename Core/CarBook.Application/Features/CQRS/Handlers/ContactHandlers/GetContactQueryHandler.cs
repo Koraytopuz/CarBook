@@ -19,6 +19,10 @@ namespace CarBook.Application.Features.CQRS.Handlers.ContactHandlers
             {
                 ContactID = x.ContactID,
                 Name = x.Name,
+                Email = x.Email,
+                Message = x.Message,
+                SendDate = x.SendDate,
+                Subject = x.Subject
             }).ToList();
         }
     }
