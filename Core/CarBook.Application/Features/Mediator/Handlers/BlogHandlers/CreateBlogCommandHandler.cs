@@ -1,4 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Commands.LocationCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.BlogCommands;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -10,20 +10,24 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Handlers.LocationHandlers
 {
-    public class CreateAuthorCommandHandler : IRequestHandler<CreateLocationCommand>
+    public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand>
     {
-        private readonly IRepository<Location> _repository;
+        private readonly IRepository<Blog> _repository;
 
-        public CreateAuthorCommandHandler(IRepository<Location> repository)
+        public CreateBlogCommandHandler(IRepository<Blog> repository)
         {
             _repository = repository;
         }
 
-        public async Task Handle(CreateLocationCommand request, CancellationToken cancellationToken)
+        public async Task Handle(CreateBlogCommand request, CancellationToken cancellationToken)
         {
-            await _repository.CreateAsync(new Location
+            await _repository.CreateAsync(new Blog
             {
-                Name = request.Name
+                AuthorID = request.AuthorID,
+                CategoryID = request.CategoryID,
+                CoverImageUrl = request.CoverImageUrl,
+                CreatedDate = request.CreatedDate,
+                Title = request.Title,
             });
         }
     }

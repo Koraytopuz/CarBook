@@ -1,4 +1,5 @@
-﻿using CarBook.Application.Features.Mediator.Commands.LocationCommands;
+﻿using CarBook.Application.Features.Mediator.Commands.BlogCommands;
+using CarBook.Application.Features.Mediator.Commands.LocationCommands;
 using CarBook.Application.Interfaces;
 using CarBook.Domain.Entites;
 using MediatR;
@@ -10,16 +11,16 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Handlers.LocationHandlers
 {
-    public class RemoveAuthorCommandHandler : IRequestHandler<RemoveLocationCommand>
+    public class RemoveBlogCommandHandler : IRequestHandler<RemoveBlogCommand>
     {
-        private readonly IRepository<Location> _repository;
+        private readonly IRepository<Blog> _repository;
 
-        public RemoveAuthorCommandHandler(IRepository<Location> repository)
+        public RemoveBlogCommandHandler(IRepository<Blog> repository)
         {
             _repository = repository;
         }
 
-        public async Task Handle(RemoveLocationCommand request, CancellationToken cancellationToken)
+        public async Task Handle(RemoveBlogCommand request, CancellationToken cancellationToken)
         {
             
                 var value = await _repository.GetByIdAsync(request.Id);

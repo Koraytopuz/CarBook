@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Queries.BlogQueries
 {
-    public class GetBLogByIdQuery:IRequest<GetBlogByIdQueryResult,>
+    public class GetBlogByIdQuery:IRequest<GetBlogByIdQueryResult>
     {
         public int Id { get; set; }
 
-        public GetBLogByIdQuery(int id)
+        public GetBlogByIdQuery(int id)
         {
             Id = id;
         }

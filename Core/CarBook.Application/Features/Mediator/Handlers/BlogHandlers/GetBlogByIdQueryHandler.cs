@@ -1,4 +1,6 @@
-﻿using CarBook.Application.Features.Mediator.Queries.LocationQueries;
+﻿using CarBook.Application.Features.Mediator.Queries.BlogQueries;
+using CarBook.Application.Features.Mediator.Queries.LocationQueries;
+using CarBook.Application.Features.Mediator.Results.BlogResults;
 using CarBook.Application.Features.Mediator.Results.FeatureResults;
 using CarBook.Application.Features.Mediator.Results.LocationResults;
 using CarBook.Application.Interfaces;
@@ -12,22 +14,26 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Handlers.LocationHandlers
 {
-    public class GetAuthorByIdQueryHandler : IRequestHandler<GetLocationByIdQuery, GetLocationByIdQueryResult>
+    public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
     {
-        private readonly IRepository<Location> _repository;
+        private readonly IRepository<Blog> _repository;
 
-        public GetAuthorByIdQueryHandler(IRepository<Location> repository)
+        public GetBlogByIdQueryHandler(IRepository<Blog> repository)
         {
             _repository = repository;
         }
 
-        public async Task<GetLocationByIdQueryResult> Handle(GetLocationByIdQuery request, CancellationToken cancellationToken)
+        public async Task<GetBlogByIdQueryResult> Handle(GetBlogByIdQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
-            return new GetLocationByIdQueryResult
+            return new GetBlogByIdQueryResult
             {
-             LocationID=values.LocationID,
-             Name=values.Name,
+             AuthorID=values.AuthorID,
+             BlogID=values.BlogID,
+             CoverImageUrl=values.CoverImageUrl,
+             Title =values.Title,
+             CreatedDate=values.CreatedDate,
+             CategoryID = values.CategoryID
             };
         }
     }
