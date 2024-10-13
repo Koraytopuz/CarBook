@@ -114,7 +114,7 @@ namespace CarBook.Persistence.Migrations
 
                     b.Property<string>("AuthorID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
                     b.Property<int>("AuthorID1")
                         .HasColumnType("int");

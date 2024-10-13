@@ -56,7 +56,7 @@ namespace CarBook.Persistence.Migrations
                     BlogID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AuthorID = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AuthorID = table.Column<string>(type: "int", nullable: false),
                     AuthorID1 = table.Column<int>(type: "int", nullable: false),
                     CoverImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
