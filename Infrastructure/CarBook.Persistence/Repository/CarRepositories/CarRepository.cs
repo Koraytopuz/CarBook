@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CarBook.Persistence.Reporsitory.CarRepository
 {
-    public class CarRepository : a
+    public class CarRepository : ICarRepository 
     {
         private readonly CarBookContext _context;
 

@@ -5,11 +5,13 @@ using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
 using CarBook.Application.Features.CQRS.Handlers.ContactHandlers;
 using CarBook.Application.Interfaces;
+using CarBook.Application.Interfaces.BlogInterfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Application.Services;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Reporsitory;
 using CarBook.Persistence.Reporsitory.CarRepository;
+using CarBook.Persistence.Repository.BlogRepositories;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -18,7 +20,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<CarBookContext>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
-builder.Services.AddScoped(typeof(a),typeof(CarRepository));
+builder.Services.AddScoped(typeof(ICarRepository),typeof(CarRepository));
+builder.Services.AddScoped(typeof(IBlogRepository),typeof(BlogRepository));
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
 builder.Services.AddScoped<CreateAboutCommandHandler>();
@@ -56,6 +59,7 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
+
 
 builder.Services.AddApplicationService(builder.Configuration);
  

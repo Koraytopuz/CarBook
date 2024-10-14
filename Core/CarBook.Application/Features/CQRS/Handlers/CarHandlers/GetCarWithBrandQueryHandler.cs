@@ -12,9 +12,9 @@ namespace CarBook.Application.Features.CQRS.Handlers.CarHandlers
 {
     public class GetCarWithBrandQueryHandler
     {
-        private readonly a _repository;
+        private readonly ICarRepository _repository;
 
-        public GetCarWithBrandQueryHandler(a repository)
+        public GetCarWithBrandQueryHandler(ICarRepository repository)
         {
             _repository = repository;
         }

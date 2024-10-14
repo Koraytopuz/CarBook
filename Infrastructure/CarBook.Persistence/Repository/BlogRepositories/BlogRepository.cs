@@ -21,7 +21,7 @@ namespace CarBook.Persistence.Repository.BlogRepositories
 
         public List<Blog> GetLast3BlogWithAuthors()
         {
-            var values= _carBookContext.Blogs.Include(b => b.Author).OrderByDescending(x => x.BlogID).Take(3).ToList();
+            var values= _carBookContext.Blogs.Include(x => x.Author).OrderByDescending(x => x.BlogID).Take(3).ToList();
             
             return values;
         }

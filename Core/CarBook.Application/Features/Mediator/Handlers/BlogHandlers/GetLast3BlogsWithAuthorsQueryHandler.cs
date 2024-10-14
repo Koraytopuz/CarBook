@@ -22,7 +22,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
         }
 
         public async Task<List<GetLast3BlogsWithAuthorsQueryResult>> Handle(GetLast3BlogsWithAuthorsQuery request, CancellationToken cancellationToken)
-        {
+        { 
             var values = _repository.GetLast3BlogWithAuthors();
             return values.Select(x => new GetLast3BlogsWithAuthorsQueryResult
             {
