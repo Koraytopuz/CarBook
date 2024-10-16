@@ -1,15 +1,14 @@
 ﻿using CarBook.Dto.BlogDtos;
-using CarBook.Dto.TestimonialDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace CarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _GetLast3BlogsWİthAuthorListComponentPartial : ViewComponent
+    public class _GetLast3BlogsWithAuthorListComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _GetLast3BlogsWİthAuthorListComponentPartial(IHttpClientFactory httpClientFactory)
+        public _GetLast3BlogsWithAuthorListComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
