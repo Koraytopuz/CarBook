@@ -16,5 +16,6 @@ namespace CarBook.Dto.BlogDtos
         public string coverImageUrl { get; set; }
         public DateTime createdDate { get; set; }
         public int categoryID { get; set; }
+        public string Description { get; set; }
     }
 }

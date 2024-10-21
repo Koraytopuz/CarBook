@@ -60,7 +60,9 @@ namespace CarBook.Persistence.Migrations
                     AuthorID1 = table.Column<int>(type: "int", nullable: false),
                     CoverImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CategoryID = table.Column<int>(type: "int", nullable: false)
+                    CategoryID = table.Column<int>(type: "int", nullable: false),
+                    BlogDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+
                 },
                 constraints: table =>
                 {

@@ -28,4 +28,12 @@
     <ProjectReference Include="..\..\Core\CarBook.Domain\CarBook.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\kryto\source\repos\CarBook\Infrastructure\CarBook.Persistence\Migrations\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\kryto\source\repos\CarBook\Infrastructure\CarBook.Persistence\Migrations\.editorconfig" />
+  </ItemGroup>
+
 </Project>
