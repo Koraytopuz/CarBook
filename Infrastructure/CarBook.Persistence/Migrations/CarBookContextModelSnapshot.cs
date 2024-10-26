@@ -132,7 +132,7 @@ namespace CarBook.Persistence.Migrations
 
                     b.HasKey("BlogID");
 
-                    b.HasIndex("AuthorID1");
+                    b.HasIndex("AuthorID");
 
                     b.HasIndex("CategoryID");
 
