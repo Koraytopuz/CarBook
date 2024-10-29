@@ -29,9 +29,10 @@ namespace CarBook.WebApi.Controllers
             return Ok("Yorum Başarıyla Eklendi");
         }
         [HttpDelete]
-        public IActionResult RemoveComment(Comment comment)
+        public IActionResult RemoveComment(int id)
         {
-            _commentsRepository.Remove(comment);
+           var value= _commentsRepository.GetById(id);
+            _commentsRepository.Remove(value);
             return Ok("Yorum Başarıyla Silindi");
         }
         [HttpPut]
