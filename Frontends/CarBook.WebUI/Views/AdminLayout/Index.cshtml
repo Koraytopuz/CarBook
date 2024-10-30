@@ -2,9 +2,9 @@
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
-
 
 @await Html.PartialAsync("/Views/AdminLayout/AdminHeaderPartial.cshtml")
 
@@ -15,7 +15,7 @@
 
         <header id="page-topbar">
             <div class="navbar-header">
-
+                
                 <div class="d-flex align-items-left">
                     <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                         <i class="fa fa-fw fa-bars"></i>
@@ -23,12 +23,12 @@
 
                     <div class="dropdown d-none d-sm-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="mdi mdi-plus"></i> Create New
                             <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                         </button>
                         <div class="dropdown-menu">
-
+                            
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 Application
@@ -56,12 +56,12 @@
 
                     <div class="dropdown d-none d-sm-inline-block ml-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="mdi mdi-magnify"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
-                             aria-labelledby="page-header-search-dropdown">
-
+                            aria-labelledby="page-header-search-dropdown">
+                            
                             <form class="p-3">
                                 <div class="form-group m-0">
                                     <div class="input-group">
@@ -77,13 +77,13 @@
 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="" src="assets/images/flags/us.jpg"alt="Header Language" height="16">
                             <span class="d-none d-sm-inline-block ml-1">English</span>
                             <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-
+                            
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
@@ -108,12 +108,12 @@
 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="mdi mdi-bell"></i>
                             <span class="badge badge-danger badge-pill">3</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
-                             aria-labelledby="page-header-notifications-dropdown">
+                            aria-labelledby="page-header-notifications-dropdown">
                             <div class="p-3">
                                 <div class="row align-items-center">
                                     <div class="col">
@@ -128,7 +128,7 @@
                                 <a href="" class="text-reset notification-item">
                                     <div class="media">
                                         <img src="assets/images/users/avatar-2.jpg"
-                                             class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                            class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="media-body">
                                             <h6 class="mt-0 mb-1">Samuel Coverdale</h6>
                                             <p class="font-size-12 mb-1">You have new follower on Instagram</p>
@@ -153,7 +153,7 @@
                                 <a href="" class="text-reset notification-item">
                                     <div class="media">
                                         <img src="assets/images/users/avatar-3.jpg"
-                                             class="mr-3 rounded-circle avatar-xs" alt="user-pic">
+                                            class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="media-body">
                                             <h6 class="mt-0 mb-1">Victoria Mendis</h6>
                                             <p class="font-size-12 mb-1">Just upgraded to premium account.</p>
@@ -172,9 +172,9 @@
 
                     <div class="dropdown d-inline-block ml-2">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-3.jpg"
-                                 alt="Header Avatar">
+                                alt="Header Avatar">
                             <span class="d-none d-sm-inline-block ml-1">Jamie D.</span>
                             <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                         </button>
@@ -202,7 +202,7 @@
                             </a>
                         </div>
                     </div>
-
+                    
                 </div>
             </div>
         </header>
@@ -329,8 +329,7 @@
                             <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-share-variant"></i><span>Multi Level</span></a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="javascript: void(0);">Level 1.1</a></li>
-                                <li>
-                                    <a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
+                                <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
                                     <ul class="sub-menu" aria-expanded="true">
                                         <li><a href="javascript: void(0);">Level 2.1</a></li>
                                         <li><a href="javascript: void(0);">Level 2.2</a></li>
@@ -345,6 +344,7 @@
             </div>
         </div>
         <!-- Left Sidebar End -->
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -357,7 +357,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="mb-0 font-size-18">Starter</h4>
+                                <h4 class="mb-0 font-size-18"></h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -365,10 +365,10 @@
                                         <li class="breadcrumb-item active">Starter</li>
                                     </ol>
                                 </div>
-
+                                
                             </div>
                         </div>
-                    </div>
+                    </div>     
                     <!-- end page title -->
 
                 </div> <!-- container-fluid -->
@@ -395,6 +395,7 @@
 
     </div>
     <!-- END layout-wrapper -->
+
     <!-- Overlay-->
     <div class="menu-overlay"></div>
 
@@ -409,7 +410,7 @@
     <!-- App js -->
     <script src="assets/js/theme.js"></script>
 
-</bod>
+</body>
 
 </html>
 @RenderBody()
