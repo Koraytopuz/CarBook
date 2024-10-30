@@ -33,7 +33,7 @@ namespace CarBook.WebApi.Controllers
         {
            var value= _commentsRepository.GetById(id);
             _commentsRepository.Remove(value);
-            return Ok("Yorum Başarıyla Silindi");
+            return Ok("Yorum  Başarıyla Silindi");
         }
         [HttpPut]
         public IActionResult UpdateComment(Comment comment)
