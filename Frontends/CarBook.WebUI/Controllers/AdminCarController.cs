@@ -87,11 +87,24 @@ namespace CarBook.WebUI.Controllers
             var responseMessage = await client.GetAsync($"https://localhost:7169/api/Cars/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
-                var jsonData=await responseMessage.Content.ReadAsStringAsync();
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateCarDtos>(jsonData);
                 return View(values);
             }
             return View();
         }
+            [HttpPost]
+            public async Task<IActionResult> UpdateCar(UpdateCarDtos updateCarDtos)
+            {
+                var client= _httpClientFactory.CreateClient();
+                var jsonData=JsonConvert.SerializeObject(updateCarDtos);
+                StringContent stringContent=new StringContent(jsonData,Encoding.UTF8,"application/json");
+                var responseMessage = await client.PutAsync("https://localhost:7169/api/Cars/", stringContent);
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+                return View();
+            }
     }
 }
