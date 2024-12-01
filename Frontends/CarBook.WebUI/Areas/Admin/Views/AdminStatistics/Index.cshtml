@@ -14,22 +14,22 @@
             <div class="card bg-primary border-primary">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Daily</span>
-                        <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                        <span class="badge badge-soft-light float-right">Aktif Araçlar</span>
+                        <h5 class="card-title mb-0 text-white">Toplam Araç Sayısı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0 text-white">
-                                $17.21
+                               # @ViewBag.v
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.v1 %<i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.v%;"></div>
                     </div>
                 </div>
             </div>
@@ -39,22 +39,22 @@
             <div class="card bg-success border-success">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Week</span>
-                        <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                        <span class="badge badge-soft-light float-right">Mevcut Lokasyonlar</span>
+                        <h5 class="card-title mb-0 text-white">Lokasyon Sayısı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $1875.54
+                                # @ViewBag.locationCount
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.locationCountRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.locationCountRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -64,22 +64,22 @@
             <div class="card bg-warning border-warning">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Month</span>
-                        <h5 class="card-title mb-0 text-white">Expenses</h5>
+                        <span class="badge badge-soft-light float-right">Yazar-personel Sayısı</span>
+                        <h5 class="card-title mb-0 text-white">Toplam Personel</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $784.62
+                                #@ViewBag.authorCount
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.authorCountRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.authorCountRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -89,22 +89,22 @@
             <div class="card bg-info border-info">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">All Time</span>
-                        <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                        <span class="badge badge-soft-light float-right">Tüm Zamanlar</span>
+                        <h5 class="card-title mb-0 text-white">Toplam Blog Sayısı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                1,15,187
+                               #@ViewBag.blogCount
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.blogCountRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.blogCountRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -119,22 +119,22 @@
             <div class="card bg-primary border-primary">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Daily</span>
-                        <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                        <span class="badge badge-soft-light float-right">Aktif Markalarımız</span>
+                        <h5 class="card-title mb-0 text-white">Toplam Marka Sayısı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0 text-white">
-                                $17.21
+                                # @ViewBag.brandCount
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.brandCountRandon% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.brandCountRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -144,22 +144,22 @@
             <div class="card bg-success border-success">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Week</span>
-                        <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                        <span class="badge badge-soft-light float-right">Günlük Kiralama</span>
+                        <h5 class="card-title mb-0 text-white">Ortalama Araç Fiyatı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $1875.54
+                                #@ViewBag.avgPriceForDaily ₺
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.avgPriceForDailyRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.avgPriceForDailyRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -169,22 +169,22 @@
             <div class="card bg-warning border-warning">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Month</span>
-                        <h5 class="card-title mb-0 text-white">Expenses</h5>
+                        <span class="badge badge-soft-light float-right">Haftalık Kiralama</span>
+                        <h5 class="card-title mb-0 text-white">Ortalama Araç Fıyatı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $784.62
+                                # @ViewBag.avgPriceForWeekly ₺
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.avgPriceForWeeklyRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.avgPriceForWeeklyRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -194,22 +194,22 @@
             <div class="card bg-info border-info">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">All Time</span>
-                        <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                        <span class="badge badge-soft-light float-right">Aylık Kiralama</span>
+                        <h5 class="card-title mb-0 text-white">Ortalama Araç Fiyatı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                1,15,187
+                                @ViewBag.avgPriceForMonthly ₺
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.avgPriceForMonthlyRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.avgPriceForMonthlyRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -224,22 +224,22 @@
             <div class="card bg-primary border-primary">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Daily</span>
-                        <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                        <span class="badge badge-soft-light float-right">Otomatik Vitesli Araç Sayısı</span>
+                        <h5 class="card-title mb-0 text-white">Otomatik Vitesli Araçlar</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0 text-white">
-                                $17.21
+                                #@ViewBag.carCountByTransmissionIsAuto
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.carCountByTransmissionIsAutoRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.carCountByTransmissionIsAutoRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -249,72 +249,72 @@
             <div class="card bg-success border-success">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Week</span>
-                        <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                        <span class="badge badge-soft-light float-right">Marka Adı</span>
+                        <h5 class="card-title mb-0 text-white">En Fazla Araçlı Marka</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $1875.54
+                                @ViewBag.brandNameByMaxCar
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.brandNameByMaxCarRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.brandNameByMaxCarRandom%;"></div>
                     </div>
                 </div>
             </div>
-        </div> <!-- end col-->
+        </div> <!-- end col dönülecek-->
 
         <div class="col-md-6 col-xl-3">
             <div class="card bg-warning border-warning">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Month</span>
-                        <h5 class="card-title mb-0 text-white">Expenses</h5>
+                        <span class="badge badge-soft-light float-right">En Fazla Yorum Alan Blog</span>
+                        <h5 class="card-title mb-0 text-white">En İyi Blog</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $784.62
+                                @ViewBag.blogTitleByMaxBlogComment
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.blogTitleByMaxBlogCommentRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.blogTitleByMaxBlogCommentRandom%;"></div>
                     </div>
                 </div>
             </div>
-        </div> <!-- end col-->
+        </div> <!-- end col en fazla yorumlu blog-->
 
         <div class="col-md-6 col-xl-3">
             <div class="card bg-info border-info">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">All Time</span>
-                        <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                        <span class="badge badge-soft-light float-right">10.000 Km Altındaki Araçlar</span>
+                        <h5 class="card-title mb-0 text-white">Araç Sayısı</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                1,15,187
+                               # @ViewBag.carCountByKmSmallerThen1000
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.carCountByKmSmallerThen1000Random% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.carCountByKmSmallerThen1000Random%;"></div>
                     </div>
                 </div>
             </div>
@@ -328,22 +328,22 @@
             <div class="card bg-primary border-primary">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Daily</span>
-                        <h5 class="card-title mb-0 text-white">Cost per Unit</h5>
+                        <span class="badge badge-soft-light float-right">Yakıt Türü</span>
+                        <h5 class="card-title mb-0 text-white">Benzin & Dizel Araç</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0 text-white">
-                                $17.21
+                                # @ViewBag.carCountByFuelGasolineOrDiesel
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">12.5% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.carCountByFuelGasolineOrDieselRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 5px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width:  @ViewBag.carCountByFuelGasolineOrDieselRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -353,22 +353,22 @@
             <div class="card bg-success border-success">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Week</span>
-                        <h5 class="card-title mb-0 text-white">Market Revenue</h5>
+                        <span class="badge badge-soft-light float-right">Yakıt Türü</span>
+                        <h5 class="card-title mb-0 text-white">Elektrikli Araç</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                $1875.54
+                               # @ViewBag.carCountByFuelElectric
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">18.71% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.carCountByFuelElectricRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 38%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.carCountByFuelElectricRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -378,22 +378,22 @@
             <div class="card bg-warning border-warning">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">Per Month</span>
-                        <h5 class="card-title mb-0 text-white">Expenses</h5>
+                        <span class="badge badge-soft-light float-right">Günlük Kiralama Fiyatı</span>
+                        <h5 class="card-title mb-0 text-white">En Pahalı Araç</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
-                            <h2 class="d-flex align-items-center text-white mb-0">
-                                $784.62
-                            </h2>
+                            <h3 class="d-flex align-items-center text-white mb-0">
+                                @ViewBag.getCarBrandAndModelByRentPriceDailyMax 
+                            </h3>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">57% <i class="mdi mdi-arrow-up"></i></span>
+                            <span class="text-white-50">@ViewBag.getCarBrandAndModelByRentPriceDailyMaxRandom% <i class="mdi mdi-arrow-up"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 68%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.getCarBrandAndModelByRentPriceDailyMaxRandom%;"></div>
                     </div>
                 </div>
             </div>
@@ -403,22 +403,22 @@
             <div class="card bg-info border-info">
                 <div class="card-body">
                     <div class="mb-4">
-                        <span class="badge badge-soft-light float-right">All Time</span>
-                        <h5 class="card-title mb-0 text-white">Daily Visits</h5>
+                        <span class="badge badge-soft-light float-right">Günlük Kiralama Fiyatı</span>
+                        <h5 class="card-title mb-0 text-white">En Ucuz</h5>
                     </div>
                     <div class="row d-flex align-items-center mb-4">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center text-white mb-0">
-                                1,15,187
+                                @ViewBag.getCarBrandAndModelByRentPriceDailyMin
                             </h2>
                         </div>
                         <div class="col-4 text-right">
-                            <span class="text-white-50">17.8% <i class="mdi mdi-arrow-down"></i></span>
+                            <span class="text-white-50">@ViewBag.getCarBrandAndModelByRentPriceDailyMinRandom% <i class="mdi mdi-arrow-down"></i></span>
                         </div>
                     </div>
 
                     <div class="progress badge-soft-light shadow-sm" style="height: 7px;">
-                        <div class="progress-bar bg-light" role="progressbar" style="width: 57%;"></div>
+                        <div class="progress-bar bg-light" role="progressbar" style="width: @ViewBag.getCarBrandAndModelByRentPriceDailyMinRandom%;"></div>
                     </div>
                 </div>
             </div>

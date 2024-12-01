@@ -1,5 +1,6 @@
 ﻿using CarBook.Application.Interfaces.StatisticsInterfaces;
 using CarBook.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +20,30 @@ namespace CarBook.Persistence.Repository.StatisticsRepositoies
 
         public string GetBlogTitleByMaxBlogComment()
         {
-            throw new NotImplementedException();
+            //select top(1) BlogId,COUNT(*) as 'Sayi' from  Comments group by BlogID order by Sayi desc
+            var values = _context.Comments.GroupBy(x => x.BlogID).
+               Select(y => new
+               {
+                   BlogID = y.Key,
+                   Count = y.Count()
+
+               }).OrderByDescending(z => z.Count).Take(1).FirstOrDefault();
+            string blogName = _context.Blogs.Where(x => x.BlogID == values.BlogID).Select(y => y.Title).FirstOrDefault();
+            return blogName;
         }
 
         public string GetBrandNameByMaxCar()
         {
-            throw new NotImplementedException();
+           var values = _context.Cars.GroupBy(x => x.BrandID).
+                Select(y => new
+                {
+                    BrandID = y.Key,
+                    Count=y.Count()
+                    
+                }).OrderByDescending(z=>z.Count).Take(1).FirstOrDefault();
+            string brandName=_context.Brands.Where(x=>x.BrandId==values.BrandID).Select(y=>y.Name).FirstOrDefault();
+            return brandName;
+
         }
 
         public int GetAuthorCount()
@@ -43,6 +62,7 @@ namespace CarBook.Persistence.Repository.StatisticsRepositoies
 
         public decimal GetAvgRentPriceForMonthly()
         {
+            // Select Avg(Amount) from CarPricings where PricingID=(Select PricingID from Pricings where Name='Aylık')
             int id = _context.Pricings.Where(y => y.Name == "Aylık").Select(z => z.PricingID).FirstOrDefault();
             var value = _context.CarPricings.Where(w => w.PricingID == id).Average(x => x.Amount);
             return value;
@@ -50,6 +70,7 @@ namespace CarBook.Persistence.Repository.StatisticsRepositoies
 
         public decimal GetAvgRentPriceForWeekly()
         {
+            // Select Avg(Amount) from CarPricings where PricingID=(Select PricingID from Pricings where Name='Haftalık')
             int id = _context.Pricings.Where(y => y.Name == "Haftalık").Select(z => z.PricingID).FirstOrDefault();
             var value = _context.CarPricings.Where(w => w.PricingID == id).Average(x => x.Amount);
             return value;
@@ -69,12 +90,20 @@ namespace CarBook.Persistence.Repository.StatisticsRepositoies
 
         public string GetCarBrandAndModelByRentPriceDailyMax()
         {
-            throw new NotImplementedException();
+            int pricindID = _context.Pricings.Where(x => x.Name == "Günlük").Select(y => y.PricingID).FirstOrDefault();
+            decimal amount = _context.CarPricings.Where(y => y.PricingID == pricindID).Max(x => x.Amount);
+            int carId = _context.CarPricings.Where(x => x.Amount == amount).Select(y => y.CarID).FirstOrDefault();
+            string brandModel = _context.Cars.Where(x => x.CarID == carId).Include(y => y.Brand).Select(z => z.Brand.Name + " " + z.Model).FirstOrDefault();
+            return brandModel;
         }
 
         public string GetCarBrandAndModelByRentPriceDailyMin()
         {
-            throw new NotImplementedException();
+            int pricindID = _context.Pricings.Where(x => x.Name == "Günlük").Select(y => y.PricingID).FirstOrDefault();
+            decimal amount = _context.CarPricings.Where(y => y.PricingID == pricindID).Min(x => x.Amount);
+            int carId = _context.CarPricings.Where(x => x.Amount == amount).Select(y => y.CarID).FirstOrDefault();
+            string brandModel = _context.Cars.Where(x => x.CarID == carId).Include(y => y.Brand).Select(z => z.Brand.Name + " " + z.Model).FirstOrDefault();
+            return brandModel;
         }
 
         public int GetCarCount()
@@ -85,7 +114,7 @@ namespace CarBook.Persistence.Repository.StatisticsRepositoies
 
         public int GetCarCountByFuelElectric()
         {
-            var value=_context.Cars.Where(x=>x.Fuel=="Elektrik").Count();
+            var value=_context.Cars.Where(x=>x.Fuel=="Elektrikli").Count();
             return value;
         }
 

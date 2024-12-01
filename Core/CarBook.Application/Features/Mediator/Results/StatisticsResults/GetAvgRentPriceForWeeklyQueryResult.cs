@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Results.StatisticsResults
 {
-    public class GetAvgPriceForMonthlyQueryResult
+    public class GetAvgRentPriceForWeeklyQueryResult
     {
-        public decimal AvgPriceForMonthly { get; set; }
+        public decimal AvgPriceForWeekly { get; set; }
     }
 }
