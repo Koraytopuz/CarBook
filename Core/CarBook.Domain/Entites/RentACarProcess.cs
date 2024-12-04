@@ -16,9 +16,8 @@ namespace CarBook.Domain.Entites
         public Car Car { get; set; }
         public int PickUpLocation { get; set; }
         public int DropOffLocation { get; set; }
-        [Column(TypeName ="Date")]
+        [DataType(DataType.Date)]
         public DateTime PickUpDate { get; set; }
-        [Column(TypeName = "Date")]
         [DataType(DataType.Date)]
         public DateTime DropOffDate { get; set; }
         [DataType(DataType.Time)]

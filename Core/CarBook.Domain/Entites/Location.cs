@@ -11,6 +11,8 @@ namespace CarBook.Domain.Entites
         public int LocationID { get; set; }
         public string Name { get; set; }
         public List<RentACar> RentACars { get; set; }
+        public List<Rezervation> PickUpRezervation { get; set; }
+        public List<Rezervation> DropOffRezervation { get; set; }
 
     }
 }
