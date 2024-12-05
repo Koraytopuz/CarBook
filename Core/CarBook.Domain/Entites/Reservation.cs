@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarBook.Domain.Entites
 {
-    public class Rezervation
+    public class Reservation
     {
-        public int RezervationID { get; set; }
+        public int ReservationID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
@@ -16,8 +16,8 @@ namespace CarBook.Domain.Entites
         public int? PickUpLocationID { get; set; }
         public int? DropOffLocationID { get; set; }
         public int CarID { get; set; }
-        public int Age{ get; set; }
-        public int DriverLicenceYear { get; set; }
+        public int Age { get; set; }
+        public int DriverLicenceYears { get; set; }
         public string? Description { get; set; }
         public Location PickUpLocation { get; set; }
         public Location DropOffLocation { get; set; }

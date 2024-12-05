@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarBook.Persistence.Migrations
 {
     [DbContext(typeof(CarBookContext))]
-    [Migration("20241204191733_mig_add_newtable2")]
-    partial class mig_add_newtable2
+    [Migration("20241205230525_mig_add_res")]
+    partial class mig_add_res
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -503,7 +503,7 @@ namespace CarBook.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DropOffDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("DropOffDescription")
                         .IsRequired()
@@ -515,8 +515,8 @@ namespace CarBook.Persistence.Migrations
                     b.Property<TimeSpan>("DropOffTime")
                         .HasColumnType("time");
 
-                    b.Property<DateTime?>("PickUpDate")
-                        .HasColumnType("Date");
+                    b.Property<DateTime>("PickUpDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PickUpDescription")
                         .IsRequired()
@@ -537,16 +537,16 @@ namespace CarBook.Persistence.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.ToTable("RentACarsProcesses");
+                    b.ToTable("RentACarProcesses");
                 });
 
-            modelBuilder.Entity("CarBook.Domain.Entites.Rezervation", b =>
+            modelBuilder.Entity("CarBook.Domain.Entites.Reservation", b =>
                 {
-                    b.Property<int>("RezervationID")
+                    b.Property<int>("ReservationID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RezervationID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservationID"));
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -557,7 +557,7 @@ namespace CarBook.Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DriverLicenceYear")
+                    b.Property<int>("DriverLicenceYears")
                         .HasColumnType("int");
 
                     b.Property<int?>("DropOffLocationID")
@@ -582,13 +582,13 @@ namespace CarBook.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RezervationID");
+                    b.HasKey("ReservationID");
 
                     b.HasIndex("DropOffLocationID");
 
                     b.HasIndex("PickUpLocationID");
 
-                    b.ToTable("Rezervations");
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("CarBook.Domain.Entites.Service", b =>
@@ -820,14 +820,14 @@ namespace CarBook.Persistence.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("CarBook.Domain.Entites.Rezervation", b =>
+            modelBuilder.Entity("CarBook.Domain.Entites.Reservation", b =>
                 {
                     b.HasOne("CarBook.Domain.Entites.Location", "DropOffLocation")
-                        .WithMany("DropOffRezervation")
+                        .WithMany("DropOffReservation")
                         .HasForeignKey("DropOffLocationID");
 
                     b.HasOne("CarBook.Domain.Entites.Location", "PickUpLocation")
-                        .WithMany("PickUpRezervation")
+                        .WithMany("PickUpReservation")
                         .HasForeignKey("PickUpLocationID");
 
                     b.Navigation("DropOffLocation");
@@ -893,9 +893,9 @@ namespace CarBook.Persistence.Migrations
 
             modelBuilder.Entity("CarBook.Domain.Entites.Location", b =>
                 {
-                    b.Navigation("DropOffRezervation");
+                    b.Navigation("DropOffReservation");
 
-                    b.Navigation("PickUpRezervation");
+                    b.Navigation("PickUpReservation");
 
                     b.Navigation("RentACars");
                 });
