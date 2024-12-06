@@ -35,8 +35,6 @@ namespace CarBook.WebUI.Controllers
 
                                             }).ToList();
             ViewBag.v = values2;
-
-
             return View();
         }
         [HttpPost]
@@ -45,7 +43,7 @@ namespace CarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createReservationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7169/api/Reservaations/", stringContent);
+            var responseMessage = await client.PostAsync("https://localhost:7169/api/Reservations/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Default");

@@ -19,6 +19,5 @@ namespace CarBook.Application.Features.Mediator.Commands.ReservationCommands
         public int Age { get; set; }
         public int DriverLicenceYears { get; set; }
         public string Description { get; set; }
-        public string Status { get; set; }
     }
 }

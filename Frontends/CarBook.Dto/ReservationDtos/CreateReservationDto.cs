@@ -13,11 +13,11 @@ namespace CarBook.Dto.ReservationDtos
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public int? PickUpLocationID { get; set; }
-        public int? DropOffLocationID { get; set; }
+        public int PickUpLocationID { get; set; }
+        public int DropOffLocationID { get; set; }
         public int CarID { get; set; }
         public int Age { get; set; }
         public int DriverLicenceYears { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
     }
 }
