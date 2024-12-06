@@ -50,5 +50,7 @@ namespace CarBook.Persistence.Context
                 .HasForeignKey(z => z.DropOffLocationID)
                 .OnDelete(DeleteBehavior.ClientSetNull);
         }
+       
+      
     }
 }
