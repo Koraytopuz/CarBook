@@ -25,6 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBook.Dto", "Frontends\Ca
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{EF00FF50-B145-41AD-933F-E2ECCDDC3F4F}"
 	ProjectSection(SolutionItems) = preProject
+		AlertScript.txt = AlertScript.txt
 		StatisticList.txt = StatisticList.txt
 	EndProjectSection
 EndProject
