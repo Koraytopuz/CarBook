@@ -36,27 +36,23 @@ namespace CarBook.Persistence.Repository.CarPricingRepositories
             List<CarPricingViewModel> values = new List<CarPricingViewModel>();
             using (var command = _context.Database.GetDbConnection().CreateCommand())
             {
-                command.CommandText = "Select* From (Select Model,PricingID,Amount from CarPricings Inner join Cars on Cars.CarID=CarPricings.CarID Inner join Brands on Brands.BrandId=Cars.BrandID) as SourceTable Pivot (Sum(Amount) for PricingID in([2],[3],[5])) as PivotTable;";
+                command.CommandText = "Select * From (Select Model,CoverImageUrl,PricingID,Amount From CarPricings Inner Join Cars On Cars.CarID=CarPricings.CarId Inner Join Brands On Brands.BrandID=Cars.BrandID) As SourceTable Pivot (Sum(Amount) For PricingID In ([3],[5],[6])) as PivotTable;";
                 command.CommandType = System.Data.CommandType.Text;
                 _context.Database.OpenConnection();
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        CarPricingViewModel carPricingViewModel = new CarPricingViewModel();
-                        Enumerable.Range(1, 3).ToList().ForEach(x =>
+                        CarPricingViewModel carPricingViewModel = new CarPricingViewModel()
                         {
-                            carPricingViewModel.Model = reader[0].ToString();
-                            if (DBNull.Value.Equals(reader[x]))
-                            {
-                                carPricingViewModel.Amounts.Add(0);
+                            Model = reader["Model"].ToString(),
+                            CoverImageUrl = reader["CoverImageUrl"].ToString(),
+                            Amounts = new List<decimal> {
+                                Convert.ToDecimal(reader["3"]),
+                                Convert.ToDecimal(reader["5"]),
+                                Convert.ToDecimal(reader["6"])
                             }
-                            else
-                            {
-                                carPricingViewModel.Amounts.Add(reader.GetDecimal(x));
-
-                            }
-                        });
+                        };
                         values.Add(carPricingViewModel);
                     }
                 }
