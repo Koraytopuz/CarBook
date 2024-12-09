@@ -70,18 +70,7 @@ namespace CarBook.WebUI.Controllers
             }
             return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> UpdateFeatures(UpdateFeatureDto updateFeatureDto)
-        {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateFeatureDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("https://localhost:7169/api/Features/", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            return View();
+       
+           
         }
     }
-}
