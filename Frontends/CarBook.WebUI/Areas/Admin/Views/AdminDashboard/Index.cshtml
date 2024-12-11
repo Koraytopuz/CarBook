@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+    <div class="page-content">
+        <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <h4 class="mb-0 font-size-18">Dashboard</h4>
+                    </div>
+                </div>
+            </div>
+          
+            @await Component.InvokeAsync("_AdminDashboardStatisticsComponentPartial")
+            <div class="row">
+
+            @await Component.InvokeAsync("_AdminDashboardChart1ComponentPartial")
+            @await Component.InvokeAsync("_AdminDashboardChart2ComponentPartial")
+            @await Component.InvokeAsync("_AdminDashboardChart3ComponentPartial")
+            </div>
+            <div class="row">
+        @await Component.InvokeAsync("_AdminDashboradCarPricingListComponentPartial")
+            </div>
+        </div>
+    </div>
+<!-- jQuery  -->
+<script src="~/Admin/Vertical/assets/js/jquery.min.js"></script>
+<script src="~/Admin/Vertical/assets/js/bootstrap.bundle.min.js"></script>
+<script src="~/Admin/Vertical/assets/js/metismenu.min.js"></script>
+<script src="~/Admin/Vertical/assets/js/waves.js"></script>
+<script src="~/Admin/Vertical/assets/js/simplebar.min.js"></script>
+<!-- Morris Js-->
+<script src="~/Admin/plugins/morris-js/morris.min.js"></script>
+<!-- Raphael Js-->
+<script src="~/Admin/plugins/raphael/raphael.min.js"></script>
+<!-- Morris Custom Js-->
+<script src="~/Admin/Vertical/assets/pages/dashboard-demo.js"></script>
+<!-- App js -->
+<script src="~/Admin/Vertical/assets/js/theme.js"></script>
