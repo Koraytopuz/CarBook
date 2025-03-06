@@ -2,7 +2,7 @@
 ## Projenin Amacı;
 Proje bir araç kiralama uygulamasıdır. Kullanıcılar lokasyona göre araçları filtreleyebilir ve seçilen araçlar için rezervasyon oluşturabilirler. Bununla birlikte blogları görüp okuyabilir, etiket sistemine, yazarlara ve kategorilere göre bloglarda listeleme yapabilmektedirler. Okudukları bloglara ve aldıkları araca yorum yapabilmektedirler. İletişim formundan sistem yöneticisine mesaj atabilmektedir. Bununla birlikte güçlü bir yönetim arayüzü olan uygulamada bütün bu sistem rol bazlı yönetim sistemiyle kontrol edilmektedir.
 ##  Kullanılan Bazı Teknolojiler
-*  Onion Architecture mimarisiyle ve 
+*  Onion Architecture mimarisi
 *  Proje CQRS ve Mediator Design Patterns üzerine kuruldu.
 *  DbCodeFirst ile MSSQL veritabanı oluşturulup yönetimi sağlandı.
 *  Entity Framework 8.0 Veritabanı etkileşimi ve ORM için kullanıldı.
